@@ -19,6 +19,14 @@
    
     <label>Author:</label><br/>
     <input type="text" name="author"/><br/>
+
+     <label for="id-status">Status:</label><br/>
+    <select name="status" id="id-status">
+        {% for choice in status_choices %}
+        <option value="{{choice.0}}"> {{ choice.1 }}</option>
+        {% endfor %}
+    </select><br/>
+
     <br/>
     <input type="submit" value="Send"/>
 </form>
